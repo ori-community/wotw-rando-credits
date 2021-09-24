@@ -1,0 +1,68 @@
+{{#block at=4.0}}
+  {{~#text}}Randomizer{{/text}}
+
+  {{~#text}}
+    {{#style color="999999ff" size=0.8}}created by{{/style}}
+  {{/text}}
+
+  {{~#text spacing=2.0 x=-0.1 anchor="right"}}
+    {{#style color="03c2fcff" size=1.2}}Eiko{{/style}}
+  {{/text}}
+  {{~#text spacing=0}}-{{/text}}
+  {{~#text spacing=0 x=0.1 anchor="left"}}Lead Developer{{/text}}
+
+  {{~#text spacing=1.2 x=-0.1 anchor="right"}}
+    {{#rainbow_style colors="ff9cfcff,912c96ff" size=1.2}}Xemsys{{/rainbow_style}}
+  {{/text}}
+  {{~#text spacing=0}}-{{/text}}
+  {{~#text spacing=0 x=0.1 anchor="left"}}Core Developer{{/text}}
+
+  {{~#text spacing=1.2 x=-0.1 anchor="right"}}
+    {{#style color="ffff38ff" size=1.2}}Bad{{/style}}{{#style color="7bfc35ff" size=1.2}}Wolf{{/style}}
+  {{/text}}
+  {{~#text spacing=0}}-{{/text}}
+  {{~#text spacing=0 x=0.1 anchor="left"}}Mod Loader & Engine Developer{{/text}}
+
+  {{~#text spacing=1.2 x=-0.1 anchor="right"}}
+    {{#rainbow_style colors="ff9d0aff,ff600aff,ff3b0aff" size=1.2}}Zre{{/rainbow_style}}
+  {{/text}}
+  {{~#text spacing=0}}-{{/text}}
+  {{~#text spacing=0 x=0.1 anchor="left"}}User Interface & DevOps{{/text}}
+
+  {{~#text spacing=1.2 x=-0.1 anchor="right"}}
+    {{#style color="128cffff" size=1.2}}Sirius{{/style}} - Seed Generator and Logic
+  {{/text}}
+  {{~#text spacing=0}}-{{/text}}
+  {{~#text spacing=0 x=0.1 anchor="left"}}Seed Generator & Logic{{/text}}
+{{/block}}
+
+{{#block at=8.5}}
+  {{~#text x=-5.0}}
+    {{#style color="999999ff" size=0.8}}Tracker made by{{/style}}
+  {{/text}}
+  {{#each tracker}}
+    {{~#text x=-5.0}}{{this}}{{/text}}
+  {{/each}}
+{{/block}}
+
+{{#block at=8.5}}
+  {{~#text x=-5.0}}
+    {{#style color="999999ff" size=0.8}}Wiki by{{/style}}
+  {{/text}}
+  {{#each wiki}}
+    {{~#text x=-5.0}}{{this}}{{/text}}
+  {{/each}}
+{{/block}}
+
+{{#two_columns pathfinders}}
+  {{#block at=14.0}}
+    {{#each column1}}
+      {{~#text x=-5.0}}{{this}}{{/text}}
+    {{/each}}
+  {{/block}}
+  {{#block at=14.0}}
+    {{#each column2}}
+      {{~#text x=5.0}}{{this}}{{/text}}
+    {{/each}}
+  {{/block}}
+{{/two_columns}}
