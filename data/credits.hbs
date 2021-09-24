@@ -1,13 +1,13 @@
 {{#block at=4.0}}
   {{~#text}}
-    {{#style size=2.0}}Randomizer{{/style}}
+    {{#style size=1.5}}Randomizer{{/style}}
   {{/text}}
 
   {{~#text}}
     {{#style color="999999ff" size=0.8}}created by{{/style}}
   {{/text}}
 
-  {{~#text spacing=2.0 x=-0.5 anchor="right" align="right"}}
+  {{~#text spacing=1.4 x=-0.5 anchor="right" align="right"}}
     {{#style color="03c2fcff" size=1.5}}Eiko{{/style}}
   {{/text}}
   {{~#text spacing=0}}-{{/text}}
@@ -38,7 +38,7 @@
   {{~#text spacing=0 x=0.5 anchor="left" align="left"}}Seed Generator & Logic{{/text}}
 {{/block}}
 
-{{#block at=8.5}}
+{{#block at=12.0 speed=0.6}}
   {{~#text x=-5.0}}
     {{#style color="999999ff" size=0.8}}Tracker made by{{/style}}
   {{/text}}
@@ -47,7 +47,7 @@
   {{/each}}
 {{/block}}
 
-{{#block at=8.5}}
+{{#block at=15.0 speed=0.6}}
   {{~#text x=5.0}}
     {{#style color="999999ff" size=0.8}}Wiki by{{/style}}
   {{/text}}
@@ -56,40 +56,29 @@
   {{/each}}
 {{/block}}
 
-{{#two_columns pathfinders}}
-  {{#block at=15.0 speed=0.6}}
-    {{~#text x=-5.0}}
-      {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
-    {{/text}}
-    {{#each column1}}
-      {{~#text x=-5.0}}{{this}}{{/text}}
-    {{/each}}
-  {{/block}}
-  {{#block at=15.0 speed=0.6}}
-    {{~#text x=5.0}}
-      {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
-    {{/text}}
-    {{#each column2}}
-      {{~#text x=5.0}}{{this}}{{/text}}
-    {{/each}}
-  {{/block}}
-{{/two_columns}}
+{{#block at=20.0 speed=0.6}}
+  {{~#text x=-5.0}}
+    {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
+  {{/text}}
+  {{#each pathfinders}}
+    {{~#text x=-5.0}}{{this}}{{/text}}
+  {{/each}}
+{{/block}}
 
-{{#two_columns betatesters}}
-  {{#block at=30.0 speed=0.6}}
-    {{~#text x=-5.0}}
-      {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
-    {{/text}}
-    {{#each column1}}
-      {{~#text x=-5.0}}{{this}}{{/text}}
-    {{/each}}
-  {{/block}}
-  {{#block at=30.0 speed=0.6}}
-    {{~#text x=5.0}}
-      {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
-    {{/text}}
-    {{#each column2}}
-      {{~#text x=5.0}}{{this}}{{/text}}
-    {{/each}}
-  {{/block}}
-{{/two_columns}}
+{{#block at=74.0 speed=0.6}}
+  {{~#text x=5.0}}
+    {{#style color="999999ff" size=0.8}}Special Thanks{{/style}}
+  {{/text}}
+  {{#each special_thanks}}
+    {{~#text x=5.0}}{{this}}{{/text}}
+  {{/each}}
+{{/block}}
+
+{{#block at=82.0 speed=0.6}}
+  {{~#text x=-5.0}}
+    {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
+  {{/text}}
+  {{#each betatesters}}
+    {{~#text x=-5.0}}{{this}}{{/text}}
+  {{/each}}
+{{/block}}
