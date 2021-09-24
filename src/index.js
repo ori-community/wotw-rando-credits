@@ -21,6 +21,7 @@ const createStyledString = (str, style) => {
 let messageId = 1000
 let lastAt = -1337
 let blockStarted = false
+let blockSpeed = 1.0
 
 Handlebars.registerHelper('text', function (options) {
   let at = options.hash.at
@@ -29,6 +30,7 @@ Handlebars.registerHelper('text', function (options) {
   let vAnchor = 1
   let fadeIn = 0
   let fadeOut = 0
+  const speed = options.hash.speed ?? blockSpeed
   const x = options.hash.x ?? 0
 
   if (at === undefined) {
@@ -53,8 +55,8 @@ Handlebars.registerHelper('text', function (options) {
 
   return new Handlebars.SafeString(
     [
-      `1|${at}|${TEXT_SPEED_Y * 10}|${messageId}|${x}|-5.0|${cleanString(options.fn(this))}|${alignment}|${hAnchor}|${vAnchor}|${fadeIn}|${fadeOut}`,
-      `2|${at}|${TEXT_SPEED_Y * 10}|${messageId}|${x}|-5.0|${x}|5.0`,
+      `1|${at}|${TEXT_SPEED_Y * speed * 10}|${messageId}|${x}|-5.0|${cleanString(options.fn(this))}|${alignment}|${hAnchor}|${vAnchor}|${fadeIn}|${fadeOut}`,
+      `2|${at}|${TEXT_SPEED_Y * speed * 10}|${messageId}|${x}|-5.0|${x}|5.0`,
     ].join('\n') + '\n')
 })
 
@@ -81,6 +83,7 @@ Handlebars.registerHelper('rainbow_style', function (options) {
 Handlebars.registerHelper('block', function (options) {
   blockStarted = false
   lastAt = options.hash.at ?? lastAt
+  blockSpeed = options.hash.speed ?? 1.0
   return options.fn(this)
 })
 

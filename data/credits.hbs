@@ -30,7 +30,7 @@
   {{~#text spacing=0 x=0.5 anchor="left" align="left"}}User Interface & DevOps{{/text}}
 
   {{~#text spacing=1.2 x=-0.5 anchor="right" align="right"}}
-    {{#style color="128cffff" size=1.5}}Sirius{{/style}} - Seed Generator and Logic
+    {{#style color="128cffff" size=1.5}}Sirius{{/style}}
   {{/text}}
   {{~#text spacing=0}}-{{/text}}
   {{~#text spacing=0 x=0.5 anchor="left" align="left"}}Seed Generator & Logic{{/text}}
@@ -46,21 +46,46 @@
 {{/block}}
 
 {{#block at=8.5}}
-  {{~#text x=-5.0}}
+  {{~#text x=5.0}}
     {{#style color="999999ff" size=0.8}}Wiki by{{/style}}
   {{/text}}
   {{#each wiki}}
-    {{~#text x=-5.0}}{{this}}{{/text}}
+    {{~#text x=5.0}}{{this}}{{/text}}
   {{/each}}
 {{/block}}
 
 {{#two_columns pathfinders}}
-  {{#block at=14.0}}
+  {{#block at=15.0 speed=0.75}}
+    {{~#text x=-5.0}}
+      {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
+    {{/text}}
     {{#each column1}}
       {{~#text x=-5.0}}{{this}}{{/text}}
     {{/each}}
   {{/block}}
-  {{#block at=14.0}}
+  {{#block at=15.0 speed=0.75}}
+    {{~#text x=-5.0}}
+      {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
+    {{/text}}
+    {{#each column2}}
+      {{~#text x=5.0}}{{this}}{{/text}}
+    {{/each}}
+  {{/block}}
+{{/two_columns}}
+
+{{#two_columns betatesters}}
+  {{#block at=30.0 speed=0.75}}
+    {{~#text x=-5.0}}
+      {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
+    {{/text}}
+    {{#each column1}}
+      {{~#text x=-5.0}}{{this}}{{/text}}
+    {{/each}}
+  {{/block}}
+  {{#block at=30.0 speed=0.75}}
+    {{~#text x=-5.0}}
+      {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
+    {{/text}}
     {{#each column2}}
       {{~#text x=5.0}}{{this}}{{/text}}
     {{/each}}
