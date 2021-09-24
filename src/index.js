@@ -32,7 +32,7 @@ Handlebars.registerHelper('text', function (options) {
   const x = options.hash.x ?? 0
 
   if (at === undefined) {
-    at = lastAt + (blockStarted ? (LINE_HEIGHT * (options.hash.spacing ?? 0)) : 0)
+    at = lastAt + (blockStarted ? (LINE_HEIGHT * (options.hash.spacing ?? 1)) : 0)
   }
 
   if (options.hash.anchor === 'left') {
