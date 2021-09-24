@@ -37,9 +37,14 @@ Handlebars.registerHelper('text', function (options) {
 
   if (options.hash.anchor === 'left') {
     hAnchor = 0
-  }
-  if (options.hash.anchor === 'right') {
+  } else if (options.hash.anchor === 'right') {
     hAnchor = 2
+  }
+
+  if (options.hash.align === 'left') {
+    alignment = 0
+  } else if (options.hash.align === 'right') {
+    alignment = 2
   }
 
   blockStarted = true
