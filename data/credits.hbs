@@ -1,5 +1,7 @@
 {{#block at=4.0}}
-  {{~#text size=2.0}}Randomizer{{/text}}
+  {{~#text}}
+    {{#style size=2.0}}Randomizer{{/style}}
+  {{/text}}
 
   {{~#text}}
     {{#style color="999999ff" size=0.8}}created by{{/style}}
@@ -55,7 +57,7 @@
 {{/block}}
 
 {{#two_columns pathfinders}}
-  {{#block at=15.0 speed=0.75}}
+  {{#block at=15.0 speed=0.6}}
     {{~#text x=-5.0}}
       {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
     {{/text}}
@@ -63,8 +65,8 @@
       {{~#text x=-5.0}}{{this}}{{/text}}
     {{/each}}
   {{/block}}
-  {{#block at=15.0 speed=0.75}}
-    {{~#text x=-5.0}}
+  {{#block at=15.0 speed=0.6}}
+    {{~#text x=5.0}}
       {{#style color="999999ff" size=0.8}}Pathfinders{{/style}}
     {{/text}}
     {{#each column2}}
@@ -74,7 +76,7 @@
 {{/two_columns}}
 
 {{#two_columns betatesters}}
-  {{#block at=30.0 speed=0.75}}
+  {{#block at=30.0 speed=0.6}}
     {{~#text x=-5.0}}
       {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
     {{/text}}
@@ -82,8 +84,8 @@
       {{~#text x=-5.0}}{{this}}{{/text}}
     {{/each}}
   {{/block}}
-  {{#block at=30.0 speed=0.75}}
-    {{~#text x=-5.0}}
+  {{#block at=30.0 speed=0.6}}
+    {{~#text x=5.0}}
       {{#style color="999999ff" size=0.8}}Beta testers{{/style}}
     {{/text}}
     {{#each column2}}
