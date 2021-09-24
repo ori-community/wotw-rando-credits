@@ -34,7 +34,7 @@ Handlebars.registerHelper('text', function (options) {
   const x = options.hash.x ?? 0
 
   if (at === undefined) {
-    at = lastAt + (blockStarted ? (LINE_HEIGHT * (options.hash.spacing ?? 1)) : 0)
+    at = lastAt + (blockStarted ? (LINE_HEIGHT * (options.hash.spacing ?? 1)) : 0) / speed
   }
 
   if (options.hash.anchor === 'left') {
@@ -55,8 +55,8 @@ Handlebars.registerHelper('text', function (options) {
 
   return new Handlebars.SafeString(
     [
-      `1|${at}|${TEXT_SPEED_Y * speed * 10}|${messageId}|${x}|-5.0|${cleanString(options.fn(this))}|${alignment}|${hAnchor}|${vAnchor}|${fadeIn}|${fadeOut}`,
-      `2|${at}|${TEXT_SPEED_Y * speed * 10}|${messageId}|${x}|-5.0|${x}|5.0`,
+      `1|${at}|${(TEXT_SPEED_Y * 10) / speed}|${messageId}|${x}|-5.0|${cleanString(options.fn(this))}|${alignment}|${hAnchor}|${vAnchor}|${fadeIn}|${fadeOut}`,
+      `2|${at}|${(TEXT_SPEED_Y * 10) / speed}|${messageId}|${x}|-5.0|${x}|5.0`,
     ].join('\n') + '\n')
 })
 
