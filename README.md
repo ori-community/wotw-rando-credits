@@ -2,7 +2,7 @@
 
 ## Usage
 
-1. Add names to the specific files in `data/` (order does not matter)
+1. Add names to the specific files in `data/`
 2. Run
    ```shell
    yarn install
