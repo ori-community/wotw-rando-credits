@@ -83,7 +83,7 @@
   {{/each}}
 {{/block}}
 
-{{#block at=100.0 speed=0.6}}
+{{#block at=1300.0 speed=0.6}}
   {{~#text x=5.0}}
     {{#style color="999999ff"}}Stats{{/style}}
   {{/text}}
@@ -109,16 +109,16 @@
     {{~#text x=5.0 spacing=2}}
       {{#style color="999999ff" size=0.9}}{{this.name}}{{/style}}
     {{/text}}
-    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.7}}Time spent:{{/style}}{{/text}}
-    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.7 color="#ade1ffff"}}$(14, {{this.time_spent}}, tframes){{/style}}{{/text}}
+    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.8}}Time spent:{{/style}}{{/text}}
+    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.8 color="#ade1ffff"}}$(14, {{this.time_spent}}, tframes){{/style}}{{/text}}
 
-    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.7}}Deaths:{{/style}}{{/text}}
-    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.7 color="#ade1ffff"}}$(14, {{this.deaths}}){{/style}}{{/text}}
+    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.8}}Deaths:{{/style}}{{/text}}
+    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.8 color="#ade1ffff"}}$(14, {{this.deaths}}){{/style}}{{/text}}
 
-    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.7}}Pickups:{{/style}}{{/text}}
-    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.7 color="#ade1ffff"}}$(14, {{this.pickups}}){{/style}}{{/text}}
+    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.8}}Pickups:{{/style}}{{/text}}
+    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.8 color="#ade1ffff"}}$(14, {{this.pickups}}){{/style}}{{/text}}
 
-    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.7}}PPM:{{/style}}{{/text}}
-    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.7 color="#ade1ffff"}}$(14, {{this.time_spent}}, ppm){{/style}}{{/text}}
+    {{~#text x=3.5 anchor="left" align="left" spacing=0.8}}{{#style size=0.8}}PPM:{{/style}}{{/text}}
+    {{~#text x=6.5 anchor="right" align="right" spacing=0}}{{#style size=0.8 color="#ade1ffff"}}$(14, {{this.time_spent}}, ppm){{/style}}{{/text}}
   {{/zones}}
 {{/block}}
