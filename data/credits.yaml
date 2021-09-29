@@ -82,3 +82,29 @@ betatesters:
 - TAS Snoop
 - Valca
 - Zackonark
+
+zones:
+- name: Marsh
+  id: 0
+- name: Hollow
+  id: 1
+- name: Glades
+  id: 2
+- name: Wellspring
+  id: 3
+- name: Pools
+  id: 4
+- name: Burrows
+  id: 5
+- name: Reach
+  id: 6
+- name: Woods
+  id: 7
+- name: Depths
+  id: 8
+- name: Ruins
+  id: 9
+- name: Willow
+  id: 10
+- name: Wastes
+  id: 11

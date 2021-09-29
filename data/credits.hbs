@@ -82,3 +82,43 @@
     {{~#text x=-5.0}}{{this}}{{/text}}
   {{/each}}
 {{/block}}
+
+{{#block at=100.0 speed=0.6}}
+  {{~#text x=5.0}}
+    {{#style color="999999ff" size=0.8}}Stats{{/style}}
+  {{/text}}
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Time:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 100, tframes){{/style}}{{/text}}
+
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Deaths:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 101){{/style}}{{/text}}
+
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Time lost to deaths:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 105, tframes){{/style}}{{/text}}
+
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Warps used:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 106){{/style}}{{/text}}
+
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Global PPM:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 100, ppm){{/style}}{{/text}}
+
+  {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Peak PPM:{{/style}}{{/text}}
+  {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, 107, ppm){{/style}}{{/text}}
+
+  {{#zones}}
+    {{~#text x=5.0 spacing=2}}
+      {{#style color="999999ff" size=0.8}}{{this.name}}{{/style}}
+    {{/text}}
+    {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Time spent:{{/style}}{{/text}}
+    {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, {{this.time_spent}}, tframes){{/style}}{{/text}}
+
+    {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Deaths:{{/style}}{{/text}}
+    {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, {{this.deaths}}){{/style}}{{/text}}
+
+    {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}Pickups:{{/style}}{{/text}}
+    {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, {{this.pickups}}){{/style}}{{/text}}
+
+    {{~#text x=4.0 anchor="left" align="left"}}{{#style size=0.7}}PPM:{{/style}}{{/text}}
+    {{~#text x=5.5 anchor="right" align="right" spacing=0}}{{#style size=0.7}}$(14, {{this.time_spent}}, ppm){{/style}}{{/text}}
+  {{/zones}}
+{{/block}}

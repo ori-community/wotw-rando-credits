@@ -23,6 +23,9 @@ let lastAt = -1337
 let blockStarted = false
 let blockSpeed = 1.0
 
+const template = Handlebars.compile(await fs.promises.readFile('./data/credits.hbs', {encoding: 'utf-8'}))
+const data = YAML.load(await fs.promises.readFile('./data/credits.yaml', {encoding: 'utf-8'}))
+
 Handlebars.registerHelper('text', function (options) {
   let at = options.hash.at
   let alignment = 1
@@ -94,8 +97,20 @@ Handlebars.registerHelper('two_columns', function (context, options) {
   })
 })
 
-const template = Handlebars.compile(await fs.promises.readFile('./data/credits.hbs', {encoding: 'utf-8'}))
-const data = YAML.load(await fs.promises.readFile('./data/credits.yaml', {encoding: 'utf-8'}))
+Handlebars.registerHelper('zones', function(options) {
+  let ret = "";
+
+  for (const zone of data.zones) {
+    ret = ret + options.fn({
+      ...zone,
+      time_spent: zone.id,
+      deaths: zone.id + 20,
+      pickups: zone.id + 40,
+    })
+  }
+
+  return ret;
+});
 
 await fs.promises.writeFile('./credits', template(data))
 
