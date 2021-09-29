@@ -5,7 +5,13 @@ import YAML from 'js-yaml'
 const TEXT_SPEED_Y = 12.9 / 10.0
 const LINE_HEIGHT = 0.5
 
-const cleanString = str => str.split('\n').map(s => s.trim()).filter(s => !!s).join('\\n')
+const cleanString = str => {
+  if (str instanceof Handlebars.SafeString) {
+    return new Handlebars.SafeString(cleanString(str.string))
+  }
+
+  return str.split('\n').map(s => s.trim()).filter(s => !!s).join('\\n')
+}
 const createStyledString = (str, style) => {
   if (style.color) {
     str = `<hex_${style.color}>${str}</>`
