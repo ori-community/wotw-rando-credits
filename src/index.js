@@ -111,7 +111,7 @@ Handlebars.registerHelper('zones', function(options) {
       ...zone,
       time_spent: zone.id,
       deaths: zone.id + 20,
-      pickups: zone.id + 40,
+      pickups: zone.id,
     })
   }
 
