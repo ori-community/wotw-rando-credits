@@ -133,9 +133,9 @@ zones:
   id: 7
 - name: Depths
   id: 8
-- name: Ruins
-  id: 9
-- name: Willow
-  id: 10
 - name: Wastes
+  id: 9
+- name: Ruins
+  id: 10
+- name: Willow
   id: 11
