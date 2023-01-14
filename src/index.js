@@ -103,20 +103,5 @@ Handlebars.registerHelper('two_columns', function (context, options) {
   })
 })
 
-Handlebars.registerHelper('zones', function(options) {
-  let ret = "";
-
-  for (const zone of data.zones) {
-    ret = ret + options.fn({
-      ...zone,
-      time_spent: zone.id,
-      deaths: zone.id + 20,
-      pickups: zone.id,
-    })
-  }
-
-  return ret;
-});
-
 await fs.promises.writeFile('./credits', template(data))
 
